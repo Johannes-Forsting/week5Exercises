@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .my-div {width: 25px; height: 25px;background-color:red; margin:1px;}
+    </style>
+
+</head>
+<body>
+    <a href="index.html">forside</a>
+    <h1>Day 2 exercise 2</h1>
+    <div id="outer">
+        <div class="my-div" id="div1"></div>
+        <div class="my-div" id="div2"></div>
+        <div class="my-div" id="div3"></div>
+        <div class="my-div" id="div4"></div>
+        <div class="my-div" id="div5"></div>
+        <div class="my-div" id="div6"></div>
+        <div class="my-div" id="div7"></div>
+        <div class="my-div" id="div8"></div>
+        <div class="my-div" id="div9"></div>
+        <div class="my-div" id="div10"></div>
+    </div>
+</body>
+<script>
+
+
+    addEventListener("click", clicked, false)
+
+    function clicked(){
+
+    }
+
+    document.getElementById("outer").onclick = (element) =>{
+        var x = "" + element.target.id
+        x = x.replace("div", "")
+        console.log("You have clicked: " + x)
+    }
+
+
+</script>
+</html>
