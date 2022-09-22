@@ -23,20 +23,20 @@
         <div class="my-div" id="div9"></div>
         <div class="my-div" id="div10"></div>
     </div>
+    <p id="paragraph"></p>
 </body>
 <script>
 
-
-    addEventListener("click", clicked, false)
-
-    function clicked(){
-
+    //Eventhandler for alt inden i id=outer
+    document.getElementById("outer").onclick = (element) =>{
+        const x = "You have clicked: " + element.target.id
+        console.log(x)
+        setParagraph(x)
     }
 
-    document.getElementById("outer").onclick = (element) =>{
-        var x = "" + element.target.id
-        x = x.replace("div", "")
-        console.log("You have clicked: " + x)
+    //Sætter teksten i min id=paragraph
+    function setParagraph(text){
+        document.getElementById("paragraph").innerText = text
     }
 
 
