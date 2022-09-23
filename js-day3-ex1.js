@@ -20,13 +20,7 @@ document.getElementById("load-all").onclick = (evt) =>{
 }
 function getAllData(){
     fetch(url)
-        .then((r)=>{
-            console.log(r.headers)
-            if(!r.ok){
-                return Promise.reject("Ups", r.status)
-            }
-            return r.json()
-        })
+        .then((r => r.json()))//Ingen errorhandling her
         .then(data =>{
             //Her skal der arbejdes med data
 
@@ -34,6 +28,7 @@ function getAllData(){
                 <tr>
                     <td>${person.name}</td>
                     <td>${person.email}</td>
+                    <td>${person.phone}</td>
                 </tr>
                 `).join("\n")
             document.getElementById("tbody").innerHTML = allData
@@ -41,10 +36,7 @@ function getAllData(){
             //document.getElementById("my-ul").innerHTML = name
 
         })
-        .catch(e => {
-            console.error(e)
-            console.error(e.status)
-        })
+
 }
 
 
@@ -67,6 +59,7 @@ function getData(){
             <tr>
                     <td>${data.name}</td>
                     <td>${data.email}</td>
+                    <td>${data.phone}</td>
                 </tr>
                 `
             document.getElementById("tbody").innerHTML = name
@@ -80,20 +73,4 @@ function getData(){
 
 
 
-/* POST REQUEST
-const options = {
-    method: "POST",
-    headers: {"Content-type:": "application/json"},
-    body: JSON.stringify({
-        name: "Kurt Wonnegut"
-    })
-}
-
-
-fetch(url, options)
-    .then(r => r.json())
-    .then(data => {
-        console.log(data)
-    })
-    */
 

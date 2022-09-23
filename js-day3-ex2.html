@@ -3,9 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="js-day3-ex2.js" type="module"></script>
+    <style>
+        .parent {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 1px 1px;
+        }
+        .item {
+            background-color: lightskyblue;
+            border: 1px solid #fff;
+            padding: 5px 5px 5px 2em;
+            min-height: 250px;
+        }
+    </style>
 </head>
-<body>
+<body style="font-family: sans-serif">
 <a href="index.html">forside</a>
-    <h1>Day 3 exercise 2</h1>
+<h1>Day 3 exercise 1</h1>
+<div style="margin-left: 10%;width: 75%;margin-right: auto">
+    <h2>Car's 'R' Us Client Demo - Version poor ;-)</h2>
+    <div class="parent">
+        <div class="item">
+            <h3>Show all Cars</h3>
+            <button id="btn-get-all">Get all</button>
+            <p id="allCarsShow"></p>
+        </div>
+        <div class="item">
+            <h3>Find a single Car</h3>
+            <label for="text-for-id">Id</label>&nbsp;<input id="text-for-id"/>
+            <button id="btn-find-single">Find</button>
+            <p id=singleCarShow></p>
+        </div>
+        <div class="item">
+            <h3>Add a Car</h3>
+            <div><input id="input-field1"/><label for="input-field1" style="margin-left: 25px;">Id</label></div>
+            <div><input id="input-field2"/><label for="input-field2" style="margin-left: 25px;">Brand</label></div>
+            <div><input id="input-field3"/><label for="input-field3" style="margin-left: 25px;">Model</label></div>
+            <div><input id="input-field4"/><label for="input-field4" style="margin-left: 25px;">Price per day</label></div>
+            <div><input id="input-field5"/><label for="input-field5" style="margin-left: 25px;">best discouont</label></div>
+            <p> ..... remaining fields</p>
+            <button>Submit new item</button>
+            <p>Show returned data, if any</p>
+            <p>Use one of the two GET pages to verify that "something" was added</p>
+        </div>
+        <div class="item">
+            <h3>Edit a Car</h3>
+            <label for="text-for-id2">Id</label>&nbsp;<input id="text-for-id2"/>
+            <button>Find item to edit</button>
+            <p>Show what you find here, and let users edit fields</p>
+            <p>......</p>
+            <button>Submit edited item</button>
+            <p>Use one of the two GET pages to verify that "something" was added</p>
+        </div>
+    </div>
+</div>
 </body>
 </html>
+
