@@ -17,6 +17,10 @@
             padding: 5px 5px 5px 2em;
             min-height: 250px;
         }
+        .edit{
+            border: none;
+            margin-top: 3px;
+        }
     </style>
 </head>
 <body style="font-family: sans-serif">
@@ -38,24 +42,27 @@
         </div>
         <div class="item">
             <h3>Add a Car</h3>
-            <div><input id="input-field1"/><label for="input-field1" style="margin-left: 25px;">Id</label></div>
-            <div><input id="input-field2"/><label for="input-field2" style="margin-left: 25px;">Brand</label></div>
-            <div><input id="input-field3"/><label for="input-field3" style="margin-left: 25px;">Model</label></div>
-            <div><input id="input-field4"/><label for="input-field4" style="margin-left: 25px;">Price per day</label></div>
-            <div><input id="input-field5"/><label for="input-field5" style="margin-left: 25px;">best discouont</label></div>
-            <p> ..... remaining fields</p>
-            <button>Submit new item</button>
-            <p>Show returned data, if any</p>
-            <p>Use one of the two GET pages to verify that "something" was added</p>
+            <div><input id="input-brand"><label for="input-brand" style="margin-left: 25px;">Brand</label></div>
+            <div><input id="input-model"><label for="input-model" style="margin-left: 25px;">Model</label></div>
+            <div><input id="input-price" type="number"><label for="input-price" style="margin-left: 25px;">Price per day</label></div>
+            <div><input id="input-best-discount" type="number"><label for="input-best-discount" style="margin-left: 25px;">best discount</label></div>
+
+            <button id="submit-new-car">Submit new item</button>
+            <p id="status">Status: </p>
+
         </div>
         <div class="item">
             <h3>Edit a Car</h3>
-            <label for="text-for-id2">Id</label>&nbsp;<input id="text-for-id2"/>
-            <button>Find item to edit</button>
-            <p>Show what you find here, and let users edit fields</p>
-            <p>......</p>
-            <button>Submit edited item</button>
-            <p>Use one of the two GET pages to verify that "something" was added</p>
+            <label for="id-for-edit">ID</label>&nbsp;<input id="id-for-edit"/>
+            <button id="find-car-to-edit">Find item to edit</button>
+            <div style="display: flex; flex-direction: column; width: 40%">
+                <input id="put-brand" class="edit" style="background-color: transparent">
+                <input id="put-model" class="edit" style="background-color: transparent">
+                <input id="put-price" type="number" class="edit" style="background-color: transparent">
+                <input id="put-best-discount" type="number" class="edit" style="background-color: transparent">
+            </div>
+            <button id="edit-car">Submit edited item</button>
+            <p id="status-for-edit">Status: </p>
         </div>
     </div>
 </div>
